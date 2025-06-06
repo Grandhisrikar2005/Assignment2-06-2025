@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Grade</title>
+</head>
+<body>
+  <h2>Find Grade Based on Marks</h2>
+  <input type="number" id="marksInput" placeholder="Enter marks (0-100)">
+  <button onclick="findGrade()">Find Grade</button>
+  <p id="result"></p>
+
+  <script>
+    function findGrade() {
+      let marks = parseFloat(document.getElementById("marksInput").value);
+      let grade;
+      if (marks >= 90) {
+        grade = "Grade: A";
+      } else if (marks >= 80) {
+        grade = "Grade: B";
+      } else if (marks >= 70) {
+        grade = "Grade: C";
+      } else if (marks >= 60) {
+        grade = "Grade: D";
+      } else if (marks >= 50) {
+        grade = "Grade: E";
+      } else {
+        grade = "Grade: F (Fail)";
+      }
+      document.getElementById("result").innerText = grade;
+    }
+  </script>
+</body>
+</html>

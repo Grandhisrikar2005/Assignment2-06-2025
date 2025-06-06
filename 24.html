@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print Word N Times</title>
+</head>
+<body>
+  <h2>Print a Word N Times</h2>
+  <input type="text" id="wordInput" placeholder="Enter a word">
+  <input type="number" id="timesInput" placeholder="Enter number of times">
+  <button onclick="printWord()">Print</button>
+  <p id="result"></p>
+
+  <script>
+    function printWord() {
+      let word = document.getElementById("wordInput").value;
+      let times = parseInt(document.getElementById("timesInput").value);
+      let output = "";
+      for (let i = 0; i < times; i++) {
+        output += word + "<br>";
+      }
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</body>
+</html>
